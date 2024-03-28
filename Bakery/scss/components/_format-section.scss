@@ -1,0 +1,93 @@
+/* Formats section */
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.formats-section-container {
+  overflow: hidden;
+}
+.formats-title {
+  margin-bottom: 40px;
+  @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 80px;
+  }
+}
+
+.format-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+}
+
+.format-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-primary-light);
+}
+
+/*.formats-item {
+  flex-basis: calc((100% - 40px) / 3); Розрахунок ширини карток
+} */
+
+.format-card {
+  position: relative;
+  height: 444px;
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  padding: 24px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.format-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
+.formats-section-container-list--margin {
+  margin-bottom: 32px;
+}
+
+.formats-container__button {
+  display: none;
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+  }
+}
